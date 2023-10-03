@@ -1,0 +1,199 @@
+.hero {
+  &__container {
+    padding: 50px;
+  }
+  &__title {
+    margin: 0 0 30px 0;
+  }
+  &__text {
+    margin: 0 0 15px 0;
+  }
+  .select-wrapper {
+    position: relative;
+
+    &:not(:last-child) {
+      margin: 0 0 30px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+
+      display: block;
+      width: 10px;
+      height: 10px;
+
+      pointer-events: none; /* делает прозрачным для клика */
+
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10.4px 6px 0 6px;
+      border-color: #7e9bbd transparent transparent transparent;
+    }
+
+    .select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none; /* убирает стандартную стилизацию с формами, в данном случае убирает стрелку */
+
+      background: transparent;
+      border: 1px solid #7e9bbd;
+      border-radius: 6px;
+      outline: none;
+      color: var(--second-color);
+
+      padding: 10px 35px 10px 15px;
+
+      width: 100%;
+
+      cursor: pointer;
+
+      /* для Internet Explorer убирает стрелочку */
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow:
+          0 0 0 1px #38577a,
+          0 0 10px #7e9bbd;
+      }
+
+      option {
+        color: var(--main-color);
+      }
+    }
+  }
+  .form-group {
+    margin: 0 0 30px;
+
+    .dropdown {
+      position: relative;
+
+      &:not(:last-child) {
+        margin: 0 0 30px;
+      }
+
+      &__button {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: left;
+
+        padding: 13px 35px 13px 20px;
+
+        background-color: transparent;
+        border: 1px solid #7e9bbd;
+        border-radius: 6px;
+        height: 46px;
+        color: var(--second-color);
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 10.4px 6px 0 6px;
+          border-color: #7e9bbd transparent transparent transparent;
+
+          pointer-events: none; /* делает прозрачным для клика */
+        }
+
+        &:focus,
+        &--active {
+          outline: none;
+          box-shadow:
+            0 0 0 1px #38577a,
+            0 0 10px #7e9bbd;
+        }
+      }
+
+      &__list {
+        display: none;
+
+        position: absolute;
+        top: 52px;
+        left: 0;
+        z-index: 1;
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        background-color: var(--second-color);
+        box-shadow: 0 4px 8px rgba(176, 198, 225, 0.6);
+        overflow: hidden;
+
+        border-radius: 6px;
+        width: 100%;
+
+        &-item {
+          margin: 0;
+          padding: 13px 20px;
+
+          transition: 0.3s ease-in-out;
+
+          border: 1px solid #7e9bbd;
+          border-bottom: 0;
+          cursor: pointer;
+
+          color: var(--main-color);
+
+          &:first-child {
+            border-radius: 6px 6px 0 0;
+          }
+          &:last-child {
+            border-radius: 0 0 6px 6px;
+            border-bottom: 1px solid #7e9bbd;
+          }
+
+          &:hover {
+            background-color: rgba(0, 50, 50, 0.1);
+          }
+        }
+
+        &--visible {
+          display: block;
+        }
+      }
+
+      &__input-hidden {
+        display: none;
+      }
+    }
+  }
+  &__info {
+    padding: 20px;
+    background-color: adjust-hue($color: #111, $degrees: 0);
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__pre {
+    margin: 0 0 30px;
+  }
+  i {
+    color: silver;
+  }
+
+  b {
+    color: palegreen;
+  }
+}

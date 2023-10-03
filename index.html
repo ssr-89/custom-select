@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
+  <title>Custom select</title>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Black.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Bold.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-SemiBold.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Medium.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Regular.woff2" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Black.woff" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Bold.woff" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-SemiBold.woff" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Medium.woff" rel="preload" as="font" crossorigin>
+  <link type="font/woff2" href="fonts/Exo-2/Exo2-Regular.woff" rel="preload" as="font" crossorigin>
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <div id="wrapper" class="wrapper">
+    <header id="header" class="header">
+      <div class="header__container">
+        HEADER
+      </div>
+    </header>
+    <main id="main" class="main">
+      <section id="hero" class="hero">
+        <div class="hero__container">
+          <h1 class="hero__title title">Select. Стилизация на CSS</h1>
+          <p class="hero__text text">Выберите категорию:</p>
+          <div class="select-wrapper">
+            <select name="select-category" id="" class="select">
+              <option value="1">Заметки путешественника</option>
+              <option value="2">Конспекты по учёбе</option>
+              <option value="3">Фотоальбом</option>
+              <option value="4">Дневник спортсмена</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="dropdown">
+              <button class="dropdown__button">Заметки путешественника</button>
+              <ul class="dropdown__list">
+                <li class="dropdown__list-item" data-value="travel">Заметки путешественника</li>
+                <li class="dropdown__list-item" data-value="lessons">Конспекты по учёбе</li>
+                <li class="dropdown__list-item" data-value="photo">Фотоальбом</li>
+                <li class="dropdown__list-item" data-value="sport">Дневник спортсмена</li>
+              </ul>
+              <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+            </div>
+            <div class="dropdown">
+              <button class="dropdown__button">Заметки путешественника</button>
+              <ul class="dropdown__list">
+                <li class="dropdown__list-item" data-value="travel">Заметки путешественника</li>
+                <li class="dropdown__list-item" data-value="lessons">Конспекты по учёбе</li>
+                <li class="dropdown__list-item" data-value="photo">Фотоальбом</li>
+                <li class="dropdown__list-item" data-value="sport">Дневник спортсмена</li>
+              </ul>
+              <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+            </div>
+          </div>
+          <div class="hero__info">
+            <p class="hero__text text">
+              HTML:
+            </p>
+            <pre class="hero__pre pre">
+<i>&lt;!-- Общий блок для всех селектов --&gt;</i>
+&lt;div class="form-group"&gt;
+
+  <i>&lt;!-- Общий блок для одного селекта в отдельности --&gt;</i>
+  &lt;div class="dropdown"&gt;
+
+    &lt;button class="dropdown__button"&gt;Заметки путешественника&lt;/button&gt;
+
+    &lt;ul class="dropdown__list"&gt;
+      &lt;li class="dropdown__list-item" data-value="travel"&gt;Заметки путешественника&lt;/li&gt;
+      &lt;li class="dropdown__list-item" data-value="lessons"&gt;Конспекты по учёбе&lt;/li&gt;
+      &lt;li class="dropdown__list-item" data-value="photo"&gt;Фотоальбом&lt;/li&gt;
+      &lt;li class="dropdown__list-item" data-value="sport"&gt;Дневник спортсмена&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;input type="text" name="select-category" value="" class="dropdown__input-hidden"&gt;
+
+  &lt;/div&gt;
+
+  <i>&lt;!-- Общий блок для одного селекта --&gt;</i>
+  &lt;div class="dropdown"&gt;
+
+    &lt;button class="dropdown__button"&gt;Заметки путешественника&lt;/button&gt;
+
+    &lt;ul class="dropdown__list"&gt;
+      &lt;li class="dropdown__list-item" data-value="travel"&gt;Заметки путешественника&lt;/li&gt;
+      &lt;li class="dropdown__list-item" data-value="lessons"&gt;Конспекты по учёбе&lt;/li&gt;
+      &lt;li class="dropdown__list-item" data-value="photo"&gt;Фотоальбом&lt;/li&gt;
+      &lt;li class="dropdown__list-item" data-value="sport"&gt;Дневник спортсмена&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;input type="text" name="select-category" value="" class="dropdown__input-hidden"&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+            </pre>
+            <p class="hero__text text">SCSS:</p>
+            <pre class="hero__pre pre">
+<b>.form-group</b> {
+
+  <b>.dropdown</b> {
+    position: relative;
+
+    <b>&:not(:last-child)</b> {
+      margin: 0 0 30px;
+    }
+
+    <b>&__button</b> {
+      position: relative;
+      display: block;
+      width: 100%;
+      text-align: left;
+
+      padding: 13px 35px 13px 20px;
+
+      background-color: transparent;
+      border: 1px solid #7e9bbd;
+      border-radius: 6px;
+      height: 46px;
+      color: var(--second-color);
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+
+      cursor: pointer;
+
+      <b>&::after</b> {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10.4px 6px 0 6px;
+        border-color: #7e9bbd transparent transparent transparent;
+
+        pointer-events: none; <i>/* делает прозрачным для клика */</i>
+      }
+
+      <b>&:focus,
+      &--active</b> {
+        outline: none;
+        box-shadow:
+          0 0 0 1px #38577a,
+          0 0 10px #7e9bbd;
+      }
+    }
+
+    <b>&__list</b> {
+      display: none;
+
+      position: absolute;
+      top: 52px;
+      left: 0;
+      z-index: 1;
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      background-color: var(--second-color);
+      box-shadow: 0 4px 8px rgba(176, 198, 225, 0.6);
+      overflow: hidden;
+
+      border-radius: 6px;
+      width: 100%;
+
+      <b>&-item</b> {
+        margin: 0;
+        padding: 13px 20px;
+
+        transition: 0.3s ease-in-out;
+
+        border: 1px solid #7e9bbd;
+        border-bottom: 0;
+        cursor: pointer;
+
+        color: var(--main-color);
+
+        <b>&:first-child</b> {
+          border-radius: 6px 6px 0 0;
+        }
+        <b>&:last-child</b> {
+          border-radius: 0 0 6px 6px;
+          border-bottom: 1px solid #7e9bbd;
+        }
+
+        <b>&:hover</b> {
+          background-color: rgba(0, 50, 50, 0.1);
+        }
+      }
+
+      <b>&--visible</b> {
+        display: block;
+      }
+    }
+
+    <b>&__input-hidden</b> {
+      display: none;
+    }
+  }
+}
+            </pre>
+            <p class="hero__text text">JS:</p>
+            <pre class="hero__pre pre">
+'use strict'
+document.addEventListener('DOMContentLoaded', function () {
+
+  <i>// полифил метода forEach() для NodeList</i>
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i &lt; this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    }
+  }
+
+  <i>/* находим все обёртки каждого селекта  */</i>
+  const dropDown = document.querySelectorAll('.dropdown');
+
+  <i>/* перебираем каждую обёртку и задаём аргумент */</i>
+  dropDown.forEach(function (dropDownWrapper) {
+
+    <i>/* далее в каждой обёртке находим кнопку, список с элементами внутри, поле ввода и также присваиваем им переменные */</i>
+    const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+    const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+    const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+    const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+    <i>/* при клике на кнопку открывается/закрывается список */</i>
+    dropDownBtn.addEventListener('click', function () {
+      dropDownList.classList.toggle('dropdown__list--visible');
+
+      <i>/* присваивается активный класс кнопке (самодельный фокус) */</i>
+      this.classList.add('dropdown__button--active');
+    });
+
+    <i>/* при клике на отдельный элемент списка закрывается список и выбирается значение элемента для кнопки */</i>
+    dropDownListItems.forEach(function (listItem) {
+      listItem.addEventListener('click', function (e) {
+
+        e.stopPropagation(); <i>/* остановка передачи события наверх,
+        т.е., клик не считается сторонним и класс dropdown__button--active не удаляется */</i>
+
+        dropDownBtn.innerText = this.innerText;
+
+        dropDownList.classList.remove('dropdown__list--visible');
+
+        <i>/* кнопка остаётся в фокусе даже при нажатии на элемент списка */</i>
+        dropDownBtn.focus();
+
+        <i>/* присваивается значение элемента списка для инпута */</i>
+        dropDownInput.value = this.dataset.value;
+      });
+    });
+
+    <i>/* проверяется клик вне кнопки. если true, то закрывается */</i>
+    document.addEventListener("click", function (e) {
+      if (e.target !== dropDownBtn) {
+        dropDownBtn.classList.remove('dropdown__button--active');
+        dropDownList.classList.remove('dropdown__list--visible');
+      }
+    });
+
+    <i>/* при нажатии на кнопку Tab или Escape активный класс кнопки (самодельный фокус) удаляется */</i>
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Tab" || e.key === "Escape") {
+        dropDownBtn.classList.remove('dropdown__button--active');
+        dropDownList.classList.remove('dropdown__list--visible');
+      }
+    });
+
+  });
+
+});
+            </pre>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer__container">
+        FOOTER
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
